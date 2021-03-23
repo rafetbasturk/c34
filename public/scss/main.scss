@@ -1,0 +1,396 @@
+@import "config";
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Overpass', sans-serif;
+    color: $neu-v-d-g-blue;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: $neu-v-d-g-blue;
+    font-size: 1.6rem;
+    margin: 1.6rem 0;
+    display: block;
+
+    &:hover {
+        transform: scale(.98)
+    }
+}
+
+.closed {
+    display: none;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: ease .3s transform;
+}
+
+.color {
+    color: $neu-v-d-g-blue;
+}
+
+.header {
+    width: 100%;
+    height: 600px;
+    padding: 5.5rem 2.4rem;
+    border-radius: 0 0 0 10rem;
+    background: url(../images/bg-pattern-intro.svg) top -300px left -325px no-repeat, linear-gradient(135deg, $bg-v-l-red, $bg-l-red 40%);
+    background-size: 350% 250%;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    max-width: 1440px;
+    margin: auto;
+    
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &--logo img {
+            height: 3.2rem;
+        }
+
+        #close {
+            display: none;
+        }
+    }
+
+    &__nav {
+        width: calc(100% - 4.8rem);
+        padding: 2rem 2.4rem;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 20px 0 $neu-v-d-b-blue;
+        display: none;
+        position: absolute;
+        top: 12rem;
+        z-index: 1;
+
+        &__menu {
+            font-size: 2rem;
+
+            &--title {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 1.6rem 0;
+                color: $neu-v-d-b-blue;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                h4 {
+                    margin-right: 1rem;
+                    position: relative;
+                    z-index: -1;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                svg {
+                    position: relative;
+                    z-index: -1;
+                }
+            }
+
+            &--link {
+                background: $neu-g-blue;
+                padding: 1rem;
+                border-radius: .5rem;
+                margin: 1.6rem 0;
+            }
+        }
+
+        hr {
+            margin: 2.4rem 0;
+        }
+
+        &__register {
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 500;
+
+            a {
+                font-size: 1.8rem;
+                color: $neu-v-d-b-blue;
+
+                &:last-of-type {
+                    font-size: 1.6rem;
+                    display: inline-block;
+                    background: linear-gradient(90deg, $bg-v-l-red, $bg-l-red);
+                    color: white;
+                    padding: 1.6rem 4rem;
+                    border-radius: 26px;
+                    margin: 0 0 1.2rem 0;
+                }
+            }
+        }
+    }
+
+    &__section {
+        padding: 0 1.8rem;
+        color: white;
+        margin-top: 10.5rem;
+
+        h2 {
+            font-size: 3.3rem;
+            font-weight: 700;
+            margin-bottom: 1.6rem;
+            line-height: 1.4;
+        }
+
+        p {
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 1.4;
+            margin-bottom: 3rem;
+        }
+
+        &__btns {
+            display: flex;
+            justify-content: space-between;
+            width: 290px;
+            margin: auto;
+            
+            a {
+                width: 136px;
+                height: 48px;
+                border-radius: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 700;
+
+                &:first-of-type {
+                    color: $pri-l-red;
+                    background: white;
+
+                    &:hover {
+                        color: white;
+                        background: $pri-v-l-red;
+                        transition: background .3s;
+                    }
+                }
+
+                &:last-of-type {
+                    border: 1px solid white;
+                    color: white;
+
+                    &:hover {
+                        color: $pri-l-red;
+                        background: white;
+                        transition: background .3s;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.article {
+    color: $neu-v-d-b-blue;
+    text-align: center;
+    padding: 9.5rem 0;
+    max-width: 1440px;
+    margin: auto;
+
+    &__heading {
+        font-size: 2.7rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &__figure {
+        background: url(../images/illustration-editor-mobile.svg) center no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 360px;
+    }
+
+    &__body {
+
+        &__subject {
+            padding: 2rem 4.5rem;
+
+            h3 {
+                font-size: 2.7rem;
+                line-height: 1.25;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                color: $neu-v-d-g-blue;
+                line-height: 1.8
+            }
+        }
+    }
+}
+
+.state {
+    width: 100%;
+    height: 625px;
+    background: url(../images/bg-pattern-circles.svg) top -25rem left -12rem no-repeat, $bg-v-d-g-blue;
+    background-size: 165% 100%;
+    border-radius: 0 10rem 0 10rem;
+    max-width: 1440px;
+    margin: 15rem auto 0;
+
+    &__figure {
+        position: relative;
+        top: -18rem;
+
+        img {
+            width: auto;
+            height: 375px;
+            margin: auto;
+        }
+    }
+
+    &__subject {
+        text-align: center;
+        padding: 0 2.5rem;
+        color: white;
+        position: relative;
+        top: -16.5rem;
+
+        h3 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        p {
+            font-size: 1.8rem;
+            line-height: 1.8;
+        }
+    }
+}
+
+.laptop {
+    text-align: center;
+    max-width: 1440px;
+    margin: 6rem 0 10rem;
+
+    &__figure {
+        width: 100%;
+        height: 360px;
+        background: url(../images/illustration-laptop-mobile.svg) center no-repeat;
+        margin-bottom: 3rem;
+    }
+
+    &__body {
+
+        &--subject {
+            padding: 0 2.5rem;
+            margin-bottom: 3.5rem;
+
+            h3 {
+                font-size: 3rem;
+                color: $neu-v-d-b-blue;
+                margin-bottom: 2rem;
+            }
+    
+            p {
+                font-size: 1.75rem;
+                line-height: 1.65
+            }
+        }
+    }
+}
+
+.footer {
+    background: $bg-v-d-g-blue;
+    text-align: center;
+    border-radius: 0 10rem 0 0;
+    padding: 7.5rem 2.5rem;
+
+    &--container {
+        max-width: 1440px;
+        margin: auto;
+    }
+
+    &__logo {
+        margin-bottom: 8rem;
+
+        img {
+            margin: auto
+        }
+    }
+
+    &__links {
+
+        &--wrapper {
+            margin-bottom: 4.5rem;
+
+            h3 {
+                color: white;
+                margin-bottom: 2rem;
+            }
+
+            ul {
+                list-style: none;
+
+                li {
+                    padding: .25rem 0;
+                }
+
+                a {
+                    color: $neu-g-blue;
+                    padding: 0;
+                    margin: 0;
+                    font-size: 1.8rem;
+
+                    &:hover {
+                        text-decoration: underline;
+                        transform: rotateX(30deg);
+                    }
+                }
+            }
+        }
+    }
+
+    &__attribution {
+        font-size: 1.2rem;
+        color: white;
+
+        a {
+            margin: 0;
+            display: inline-block;
+            font-size: 1.2rem;
+            color: $pri-l-red;
+
+            &:hover {
+                text-decoration: underline;
+                transform: rotateX(30deg);
+            }
+        }
+    }
+}
+
+
+@import "responsive";
+
+.accordion-content {
+    animation-name: fadeIn;
+    animation-duration: 750ms;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+}

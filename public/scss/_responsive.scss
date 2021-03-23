@@ -1,0 +1,385 @@
+@include tablet {
+    .header {
+        padding: 6rem 4rem;
+        background: url(../images/bg-pattern-intro.svg) top -1000px left -350px no-repeat, linear-gradient(135deg, $bg-v-l-red, $bg-l-red 40%);
+        background-size: 200% 400%;
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        &__menu {
+            height: 4.2rem;
+
+            &--logo img {
+                height: 3.6rem;
+            }
+
+            &--hamburger {
+                display: none !important;
+            }
+        }
+
+        &__nav {
+            display: flex !important;
+            justify-content: space-between;
+            position: unset;
+            background: none;
+            box-shadow: none;
+            padding: 0;
+            width: calc(100% - 9rem);
+            margin-left: 4rem;
+
+            &--container {
+                display: flex;
+                align-items: center;
+            }
+
+            &__menu {
+                font-size: 1.6rem;
+                position: relative;
+
+                &--title {
+                    color: white;
+                    margin: 0 3rem 0 0;
+
+                    &:hover {
+
+                        h4 {
+                            text-decoration: underline;
+                        }
+                    }
+    
+                    svg {
+                        path {
+                            stroke: white;
+                        }
+                    }
+                }
+    
+                &--link {
+                    position: absolute;
+                    background: white;
+                    text-align: left;
+                    width: 170px;
+                    left: -2.4rem;
+                    padding: 1rem 2.4rem;
+
+                    a {
+                        color: $neu-v-d-g-blue;
+                        font-weight: 300;
+                        font-size: 1.6rem;
+
+                        &:hover {
+                            color: $neu-v-d-b-blue;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+    
+            hr {
+                display: none;
+            }
+    
+            &__register {
+                display: flex;
+                align-items: center;
+
+                a {
+                    font-size: 1.6rem;
+                    color: white;
+                    margin: 0;
+    
+                    &:last-of-type {
+                        padding: 1.2rem 3rem;
+                        margin: 0 0 0 1.6rem;
+                        background: white;
+                        color: $pri-l-red;
+
+                        &:hover {
+                            color: white;
+                            background: $pri-v-l-red;
+                            transition: background .3s;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__section {
+    
+            h2 {
+                font-size: 4.5rem;
+            }
+    
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .article {
+        position: relative;
+        text-align: center;
+        padding: 6rem 4rem;
+
+        &__heading {
+            font-size: 4rem;
+        }
+    
+        &__figure {
+            background-size: contain;
+            margin-bottom: 2rem;
+        }
+
+        &__body {
+            display: flex;
+            justify-content: space-between;
+            text-align: left;
+
+            &__subject {
+                width: 50%;
+                padding: 0;
+
+                &:last-of-type {
+                    margin-left: 4rem;
+                }
+            }
+        }
+    }
+
+    .state {
+        display: flex;
+        flex-direction: column;
+        background: url(../images/bg-pattern-circles.svg) top -25rem left no-repeat, $bg-v-d-g-blue;
+        background-size: 100% 100%;
+
+        &__figure {
+            top: -12rem;
+        }
+    
+        &__subject {
+            padding: 0 8rem;
+            top: -8rem;
+        }
+    }
+
+    .laptop {
+        text-align: left;
+
+        &__body {
+            display: flex;
+            margin: 0 3.5rem;
+
+            &--subject {
+                width: 50%;
+            }
+        }
+    }
+
+    .footer {
+
+        &__logo {
+            margin-bottom: 4rem;
+        }
+    
+        &__links {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+}
+
+@include laptop {
+    .header {
+        padding: 6rem 16.5rem;
+
+        &__menu {
+
+            &--logo img {
+                height: 4rem;
+            }
+        }
+
+        &__nav {
+            width: calc(100% - 10rem);
+            margin-left: 6.4rem;
+
+            &__register {
+
+                a {
+
+                    &:last-of-type {
+                        padding: 1.5rem 4rem;
+                        margin: 0 0 0 3rem;
+                    }
+                }
+            }
+        }
+    
+        &__section {
+    
+            h2 {
+                font-size: 6rem;
+            }
+    
+            p {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .article {
+        display: flex;
+        padding: 15rem 16.5rem;
+        max-width: 1440px;
+        height: 1000px;
+        overflow: hidden;
+
+        &__heading {
+            position: absolute;
+            width: 100%;
+            top: 12rem;
+            left: 0;
+        }
+
+        &__figure {
+            background: url(../images/illustration-editor-desktop.svg) no-repeat;
+            width: 925px;
+            height: 882px;
+            position: absolute;
+            top: 7rem;
+            right: -27rem;
+            z-index: -1;
+            overflow-x: hidden;
+
+        }
+
+        &__body {
+            width: 45.3%;
+            flex-direction: column;
+            justify-content: space-evenly;
+            
+
+            &__subject {
+                width: 100%;
+
+                &:first-of-type {
+                    margin: 7rem 0 0 0;
+                }
+                
+                &:last-of-type {
+                    margin: 0;
+                }
+
+                h3 {
+                    font-size: 2.8rem;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+    }
+
+    .state {
+        height: 400px;
+        flex-direction: row;
+        margin-top: 0;
+        padding: 0 16.5rem;
+        background: url(../images/bg-pattern-circles.svg) top -53rem left -21.5rem no-repeat, $bg-v-d-g-blue;
+    
+        &__figure {
+            top: -7.5rem;
+            left: -4rem;
+
+            img {
+                height: auto;
+                width: auto;
+            }
+        }
+    
+        &__subject {
+            text-align: left;
+            padding: 0;
+            top: 0;
+            align-self: center;
+
+            h3 {
+                font-size: 3.6rem;
+            }
+    
+            p {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    .laptop {
+        display: flex;
+        align-items: center;
+        margin: 16rem auto 10rem;
+        overflow-x: hidden;
+
+    
+        &__figure {
+            width: 974px;
+            height: 786px;
+            background: url(../images/illustration-laptop-desktop.svg) center no-repeat;
+            position: relative;
+            left: -21rem;
+        }
+    
+        &__body {
+            width: 50%;
+            flex-direction: column;
+            margin: 0;
+            position: relative;
+            top: 2rem;
+            left: -10rem;
+    
+            &--subject {
+                width: 90%;
+                padding: 0;
+                margin-bottom: 6rem;
+            }
+        }
+    }
+
+    .footer {
+        padding: 7.5rem 16.5rem;
+    
+        &--container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+    
+        &__logo {
+            margin-bottom: 4rem;
+            justify-self: left;
+            margin-right: 3rem;
+        }
+    
+        &__links {
+
+            justify-content: space-between;
+
+            &--wrapper {
+                text-align: left;
+                margin-right: 18rem;
+
+                ul {
+
+                    a {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+
+        &__attribution {
+            grid-column: 1 / -1;
+        }
+    }
+}

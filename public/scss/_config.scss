@@ -1,0 +1,38 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&family=Ubuntu:wght@400;500;700&display=swap");
+
+// variables
+
+$pri-l-red: hsl(356, 100%, 66%);
+$pri-v-l-red: hsl(355, 100%, 74%);
+$pri-v-d-blue: hsl(208, 49%, 24%);
+$neu-g-blue: hsl(240, 2%, 79%);
+$neu-v-d-g-blue: hsl(207, 13%, 34%);
+$neu-v-d-b-blue: hsl(240, 10%, 16%);
+$bg-v-l-red: hsl(13, 100%, 72%);
+$bg-l-red: hsl(353, 100%, 62%);
+$bg-v-d-g-blue: hsl(237, 17%, 21%);
+$bg-v-d-d-blue: hsl(237, 23%, 32%);
+
+// responsive
+
+@mixin tablet {
+    @media screen and (min-width: 768px) {
+        @content; 
+    }
+}
+
+@mixin laptop {
+    @media screen and (min-width: 1200px) {
+        @content; 
+    }
+}
